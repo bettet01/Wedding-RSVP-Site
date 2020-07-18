@@ -1,0 +1,42 @@
+.headertitle {
+    font-size: larger;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.name {
+    padding-bottom: 10px;
+}
+
+.plusone {
+    font-family: serif;
+}
+
+.plusonename {
+    padding-bottom: 20px;
+}
+
+.children {
+    padding-bottom: 10px;
+}
+
+.dinner {
+    padding-bottom: 10px;
+}
+
+.filetmignon {
+    padding-bottom: 20px;
+}
+
+.tuxedochicken {
+    padding-bottom: 20px;
+}
+
+.hotel {
+    padding-top: 20px;
+}
+
+.hotelbeds {
+    padding-bottom: 20px;
+}
