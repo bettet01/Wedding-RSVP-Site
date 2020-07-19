@@ -14,9 +14,18 @@ type Guest = {
   guestFoodChoice?: string,
   plusOneFoodChoice?: string,
   bedsNeeded?: number
+} 
+
+type BooleanChecker = {
+  plusOneChecked: boolean, 
+  hotelChecked: boolean,
 }
 
 const RSVP = () => {
+const [booleanChecker, setBooleanChecker] = React.useState<BooleanChecker>({
+  plusOneChecked: false,
+  hotelChecked: false
+})
 
 const [guest, setGuest] = React.useState<Guest | null>(null);
 
@@ -44,6 +53,13 @@ const changeBedsNeeded = (e: Event | any) => {
   setGuest({...guest, bedsNeeded: e.target.value})
 }
 
+const changeHotelCheckbox = (e: Event | any) => {
+  setBooleanChecker({...booleanChecker, hotelChecked: e.target.checked})
+}
+
+const changePlusOneChecked = (e: Event | any) => {
+  setBooleanChecker({...booleanChecker, plusOneChecked: e.target.checked})
+}
 
 const submitData = (e:any) => {
   e.preventDefault();
@@ -73,14 +89,14 @@ const submitData = (e:any) => {
             </Form.Group>
 
             <Form.Group className="plusone" controlId="PlusOneCheckBox">
-              <Form.Check type="checkbox" label="Plus One?" />
+              <Form.Check type="checkbox" label="Plus One?" onChange={changePlusOneChecked} />
             </Form.Group>
-
+            { booleanChecker.plusOneChecked &&
             <Form.Group className="plusonename" controlId="PlusOneName">
               <Form.Label></Form.Label>
               <Form.Control type="text" placeholder="Plus One's Name?" value={guest?.plusOneName} onChange={changePlusOneName} />
             </Form.Group>
-
+              }
             <Form.Group className="number" controlId="Children">
               <Form.Label></Form.Label>
               <Form.Control
@@ -112,7 +128,7 @@ const submitData = (e:any) => {
                 onClick={changeGuestFoodChoice}
               />
             </div>
-
+            { booleanChecker.plusOneChecked &&
             <div>
               <div className="dinner">Your Plus One's Dinner Choice?</div>
               <Form.Check className="dinner"
@@ -128,19 +144,21 @@ const submitData = (e:any) => {
                 id={`inline-${"radio"}-2`}
               />
             </div>
-
+                  }
             <Form.Group className="hotel" controlId="HotelCheckBox">
               <Form.Check
                 type="checkbox"
                 label="Should We Reserve A Hotel Room For You?"
+                onChange={changeHotelCheckbox}
               />
             </Form.Group>
-
+            
+            { booleanChecker.hotelChecked &&
             <Form.Group controlId="Children">
               <Form.Label></Form.Label>
               <Form.Control type="number" placeholder="Number of Beds?" value={guest?.bedsNeeded} onChange={changeBedsNeeded}/>
             </Form.Group>
-
+            }
             <Button variant="primary" type="submit" onClick={submitData}>
               Submit
             </Button>
