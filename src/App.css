@@ -2,6 +2,7 @@
   background-repeat: no-repeat;
   background-image: url(../src/WebBackground.png);
   background-size: cover;
+  background-position: center;
   height: 100vh;
   margin: 0;
 }

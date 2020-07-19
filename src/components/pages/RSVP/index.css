@@ -1,42 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap"); 
+
+.card {
+    width: 600px;
+    height: 660px;
+    margin: 50px;
+    border: round;
+}
 .headertitle {
-    font-size: larger;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 15px;
     text-align: center;
+    font-weight: bold;
 }
 
 .name {
-    padding-bottom: 10px;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 5px;
 }
 
 .plusone {
-    font-family: serif;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 60px;
 }
 
 .plusonename {
-    padding-bottom: 20px;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .children {
-    padding-bottom: 10px;
+    font-family: 'Old Standard TT', serif;
+    padding-bottom: 5px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .dinner {
-    padding-bottom: 10px;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 70px;
+    padding-bottom: 5px;
 }
 
+.dinnertwo {
+    margin-top: 10px;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 70px;
+    padding-bottom: 5px;
+}
 .filetmignon {
-    padding-bottom: 20px;
+    font-family: 'Old Standard TT', serif;
+    margin-left: 90px;
 }
 
 .tuxedochicken {
-    padding-bottom: 20px;
+    font-family: 'Old Standard TT', serif;
+}
+
+.vegetable {
+    font-family: 'Old Standard TT', serif;
 }
 
 .hotel {
-    padding-top: 20px;
+    font-family: 'Old Standard TT', serif;
+    padding-top: 10px;
+    padding-left: 60px;
 }
 
 .hotelbeds {
-    padding-bottom: 20px;
+    font-family: 'Old Standard TT', serif;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.button {
+    font-family: 'Old Standard TT', serif;
+    align-self: center; 
 }
