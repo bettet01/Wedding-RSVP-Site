@@ -31,9 +31,12 @@
     font-family: 'Old Standard TT', serif;
     padding-left: 60px;
     padding-right: 60px;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
 .children {
+    margin-top: -20px;
     font-family: 'Old Standard TT', serif;
     padding-bottom: 5px;
     padding-left: 60px;
@@ -43,14 +46,14 @@
 .dinner {
     font-family: 'Old Standard TT', serif;
     padding-left: 70px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 
 .dinnertwo {
-    margin-top: 10px;
+    margin-top: 15px;
     font-family: 'Old Standard TT', serif;
     padding-left: 70px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 .filetmignon {
     font-family: 'Old Standard TT', serif;
@@ -61,17 +64,18 @@
     font-family: 'Old Standard TT', serif;
 }
 
-.vegetable {
+.veggie {
     font-family: 'Old Standard TT', serif;
 }
 
 .hotel {
     font-family: 'Old Standard TT', serif;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 60px;
 }
 
 .hotelbeds {
+    margin-top: -25px;
     font-family: 'Old Standard TT', serif;
     padding-left: 60px;
     padding-right: 60px;
@@ -81,3 +85,10 @@
     font-family: 'Old Standard TT', serif;
     align-self: center; 
 }
+
+#button-group {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }

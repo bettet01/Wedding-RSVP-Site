@@ -5,103 +5,221 @@ import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./index.css";
+import axios from "axios";
+
+type Guest = {
+  guestName?: string;
+  plusOneName?: string;
+  children?: number;
+  guestFoodChoice?: string;
+  plusOneFoodChoice?: string;
+  bedsNeeded?: number;
+};
+
+type BooleanChecker = {
+  plusOneChecked: boolean;
+  hotelChecked: boolean;
+};
 
 const RSVP = () => {
+  const [booleanChecker, setBooleanChecker] = React.useState<BooleanChecker>({
+    plusOneChecked: false,
+    hotelChecked: false,
+  });
+
+  const [guest, setGuest] = React.useState<Guest | null>(null);
+
+  const changeGuestName = (e: Event | any) => {
+    setGuest({ ...guest, guestName: e.target.value });
+  };
+
+  const changePlusOneName = (e: Event | any) => {
+    setGuest({ ...guest, plusOneName: e.target.value });
+  };
+
+  const changeChildren = (e: Event | any) => {
+    setGuest({ ...guest, children: e.target.value });
+  };
+
+  const changeGuestFoodChoice = (e: Event | any) => {
+    setGuest({ ...guest, guestFoodChoice: e.target.value });
+  };
+
+  const changePlusOneFoodChoice = (e: Event | any) => {
+    setGuest({ ...guest, plusOneFoodChoice: e.target.value });
+  };
+
+  const changeBedsNeeded = (e: Event | any) => {
+    setGuest({ ...guest, bedsNeeded: e.target.value });
+  };
+
+  const changeHotelCheckbox = (e: Event | any) => {
+    setBooleanChecker({ ...booleanChecker, hotelChecked: e.target.checked });
+  };
+
+  const changePlusOneChecked = (e: Event | any) => {
+    setBooleanChecker({ ...booleanChecker, plusOneChecked: e.target.checked });
+  };
+
+  const submitData = (e: any) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8080/weddingguestrsvp", guest, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then(() => {
+        console.log("Made it here!");
+      })
+      .catch((err: any) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
       <Col md={6}>
-          <Row>
-        <Card className="card">
+        <Row>
+          <Card className="card">
             <header className="headertitle">RSVP</header>
-            <Form>
-            <Form.Group className="name" controlId="Name">
-              <Form.Label></Form.Label>
-              <Form.Control type="text" placeholder="Name" />
-            </Form.Group>
+            <Form onSubmit={submitData}>
+              <Form.Group className="name" controlId="Name">
+                <Form.Label></Form.Label>
+                <Form.Control
+                  type="text"
+                  placeholder="Name"
+                  value={guest?.guestName}
+                  onChange={changeGuestName}
+                />
+              </Form.Group>
 
-            <Form.Group className="plusone" controlId="PlusOneCheckBox">
-              <Form.Check type="checkbox" label="Plus One?" />
-            </Form.Group>
-            
-            <Form.Group className="plusonename" controlId="PlusOneName">
-              <Form.Label></Form.Label>
-              <Form.Control type="text" placeholder="Plus One's Name?" />
-            </Form.Group>
+              <Form.Group className="plusone" controlId="PlusOneCheckBox">
+                <Form.Check
+                  type="checkbox"
+                  label="Plus One?"
+                  onChange={changePlusOneChecked}
+                />
+              </Form.Group>
 
-            <Form.Group className="children" controlId="Children">
-              <Form.Label></Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="Number of Children You're Bringing?"
-              />
-              <Form.Text className="text-muted">
-                Children Will Receive Chicken Fingers As Their Dinner.
-              </Form.Text>
-            </Form.Group>
+              {booleanChecker.plusOneChecked && (
+                <Form.Group className="plusonename" controlId="PlusOneName">
+                  <Form.Control
+                    type="text"
+                    placeholder="Plus One's Name?"
+                    value={guest?.plusOneName}
+                    onChange={changePlusOneName}
+                  />
+                </Form.Group>
+              )}
+              <Form.Group className="children" controlId="Children">
+                <Form.Label></Form.Label>
+                <Form.Control
+                  max="5"
+                  min="0"
+                  type="number"
+                  placeholder="Number of Children You're Bringing?"
+                  value={guest?.children}
+                  onChange={changeChildren}
+                />
+                <Form.Text className="text-muted">
+                  Children Will Receive Chicken Fingers As Their Dinner.
+                </Form.Text>
+              </Form.Group>
 
-            <div>
-              <div className="dinner">Your Dinner Choice?</div>
-              <Form.Check className="filetmignon"
-                inline
-                label="Filet Mignon"
-                type={"radio"}
-                id={`inline-${"radio"}-1`}
-              />
-              <Form.Check className="tuxedochicken"
-                inline
-                label="Tuxedo Chicken"
-                type={"radio"}
-                id={`inline-${"radio"}-2`}
-              />
-               <Form.Check className="vegetable"
-                inline
-                label="Veggie Stack"
-                type={"radio"}
-                id={`inline-${"radio"}-3`}
-              />
-            </div>
+              <div>
+                <div className="dinner">Your Dinner Choice?</div>
+                <Form.Check
+                  name="dinner"
+                  className="filetmignon"
+                  inline
+                  label="Filet Mignon"
+                  type={"radio"}
+                  id={`inline-${"radio"}-1`}
+                  value="Filet Mignon"
+                  onClick={changeGuestFoodChoice}
+                />
+                <Form.Check
+                  name="dinner"
+                  className="tuxedochicken"
+                  inline
+                  label="Tuxedo Chicken"
+                  type={"radio"}
+                  id={`inline-${"radio"}-2`}
+                  value="Tuxedo Chicken"
+                  onClick={changeGuestFoodChoice}
+                />
+                <Form.Check
+                  name="dinner"
+                  className="veggie"
+                  inline
+                  label="Veggie Stack"
+                  type={"radio"}
+                  id={`inline-${"radio"}-3`}
+                />
+              </div>
+              {booleanChecker.plusOneChecked && (
+                <div>
+                  <div className="dinnertwo">
+                    Your Plus One's Dinner Choice?
+                  </div>
+                  <Form.Check
+                    name="dinnertwo"
+                    className="filetmignon"
+                    inline
+                    label="Filet Mignon"
+                    type={"radio"}
+                    id={`inline-${"radio"}-1`}
+                  />
+                  <Form.Check
+                    name="dinnertwo"
+                    className="tuxedochicken"
+                    inline
+                    label="Tuxedo Chicken"
+                    type={"radio"}
+                    id={`inline-${"radio"}-2`}
+                  />
+                  <Form.Check
+                    name="dinnertwo"
+                    className="veggie"
+                    inline
+                    label="Veggie Stack"
+                    type={"radio"}
+                    id={`inline-${"radio"}-3`}
+                  />
+                </div>
+              )}
+              <Form.Group className="hotel" controlId="HotelCheckBox">
+                <Form.Check
+                  type="checkbox"
+                  label="Should We Reserve A Hotel Room(s) For You?"
+                  onChange={changeHotelCheckbox}
+                />
+              </Form.Group>
 
-            <div>
-              <div className="dinnertwo">Your Plus One's Dinner Choice?</div>
-              <Form.Check className="filetmignon"
-                inline
-                label="Filet Mignon"
-                type={"radio"}
-                id={`inline-${"radio"}-1`}
-              />
-              <Form.Check className="tuxedochicken"
-                inline
-                label="Tuxedo Chicken"
-                type={"radio"}
-                id={`inline-${"radio"}-2`}
-              />
-              <Form.Check className="vegetable"
-                inline
-                label="Veggie Stack"
-                type={"radio"}
-                id={`inline-${"radio"}-3`}
-              />
-            </div>
-
-            <Form.Group className="hotel" controlId="HotelCheckBox">
-              <Form.Check
-                type="checkbox"
-                label="Should We Reserve A Hotel Room For You?"
-              />
-            </Form.Group>
-
-            <Form.Group className="hotelbeds" controlId="Beds">
-              <Form.Label></Form.Label>
-              <Form.Control type="number" placeholder="Number of Beds?" />
-            </Form.Group>
-            
-            <div className="text-center">
-                <Button className="button" variant="outline-primary" type="submit">
+              {booleanChecker.hotelChecked && (
+                <Form.Group className="hotelbeds" controlId="Beds">
+                  <Form.Label></Form.Label>
+                  <Form.Control
+                    max="4"
+                    min="0"
+                    type="number"
+                    placeholder="Number of Beds?"
+                    value={guest?.bedsNeeded}
+                    onChange={changeBedsNeeded}
+                  />
+                </Form.Group>
+              )}
+              <Button
+                id="button-group"
+                variant="outline-primary"
+                type="submit"
+                onClick={submitData}
+              >
                 Submit
-                </Button>
-            </div>
-          </Form>
-        </Card>
+              </Button>
+            </Form>
+          </Card>
         </Row>
       </Col>
       <Col></Col>
