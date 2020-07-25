@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import RSVP from "./components/pages/RSVP";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar/index";
+import NavBar from "./components/subcomponents/NavBar/index";
 import Homepage from "./components/pages/Homepage";
 
 function App() {

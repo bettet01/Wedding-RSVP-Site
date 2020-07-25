@@ -6,15 +6,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./index.css";
 import axios from "axios";
-
-type Guest = {
-  guestName?: string;
-  plusOneName?: string;
-  children?: number;
-  guestFoodChoice?: string;
-  plusOneFoodChoice?: string;
-  bedsNeeded?: number;
-};
+import {Reservation} from "../../../types/Reservation";
+import GuestForm from "../../subcomponents/GuestForm";
+import {Guest} from "../../../types/Guest";
 
 type BooleanChecker = {
   plusOneChecked: boolean;
@@ -22,49 +16,44 @@ type BooleanChecker = {
 };
 
 const RSVP = () => {
+  const [guests, setGuests] = React.useState<Guest[]>([
+    {
+      guestName: '',
+      guestFoodChoice: '',
+    },
+  ])
   const [booleanChecker, setBooleanChecker] = React.useState<BooleanChecker>({
     plusOneChecked: false,
     hotelChecked: false,
   });
+  const [reservation, setReservation] = React.useState<Reservation | null>(null);
 
-  const [guest, setGuest] = React.useState<Guest | null>(null);
-
-  const changeGuestName = (e: Event | any) => {
-    setGuest({ ...guest, guestName: e.target.value });
-  };
-
-  const changePlusOneName = (e: Event | any) => {
-    setGuest({ ...guest, plusOneName: e.target.value });
-  };
+  const addGuest = (e: Event | any) => {
+    var newState:Guest[] = guests;
+    newState.push({
+      guestName: '',
+      guestFoodChoice: '',
+    });
+    setGuests([...newState]);
+    console.log(guests);
+  }
 
   const changeChildren = (e: Event | any) => {
-    setGuest({ ...guest, children: e.target.value });
-  };
-
-  const changeGuestFoodChoice = (e: Event | any) => {
-    setGuest({ ...guest, guestFoodChoice: e.target.value });
-  };
-
-  const changePlusOneFoodChoice = (e: Event | any) => {
-    setGuest({ ...guest, plusOneFoodChoice: e.target.value });
+    setReservation({ ...reservation, children: e.target.value });
   };
 
   const changeBedsNeeded = (e: Event | any) => {
-    setGuest({ ...guest, bedsNeeded: e.target.value });
+    setReservation({ ...reservation, bedsNeeded: e.target.value });
   };
 
   const changeHotelCheckbox = (e: Event | any) => {
     setBooleanChecker({ ...booleanChecker, hotelChecked: e.target.checked });
   };
 
-  const changePlusOneChecked = (e: Event | any) => {
-    setBooleanChecker({ ...booleanChecker, plusOneChecked: e.target.checked });
-  };
-
   const submitData = (e: any) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/weddingguestrsvp", guest, {
+      .post("http://localhost:8080/weddingguestrsvp", reservation, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -84,52 +73,14 @@ const RSVP = () => {
           <Card className="card">
             <header className="headertitle">RSVP</header>
             <Form onSubmit={submitData}>
-              <Form.Group className="name" controlId="Name">
-                <Form.Label>
-                  Your Name
-                </Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Name"
-                  value={guest?.guestName}
-                  onChange={changeGuestName}
-                />
-              </Form.Group>
-
-              <div>
-                <div className="dinner">Dinner Selection?</div>
-                <Form.Check
-                  name="dinner"
-                  className="filetmignon"
-                  inline
-                  label="Filet Mignon"
-                  type={"radio"}
-                  id={`inline-${"radio"}-1`}
-                  value="Filet Mignon"
-                  onClick={changeGuestFoodChoice}
-                />
-                <Form.Check
-                  name="dinner"
-                  className="tuxedochicken"
-                  inline
-                  label="Tuxedo Chicken"
-                  type={"radio"}
-                  id={`inline-${"radio"}-2`}
-                  value="Tuxedo Chicken"
-                  onClick={changeGuestFoodChoice}
-                />
-                <Form.Check
-                  name="dinner"
-                  className="veggie"
-                  inline
-                  label="Veggie Stack"
-                  type={"radio"}
-                  id={`inline-${"radio"}-3`}
-                />
-              </div>
+              { guests.map((guest, index) => {
+                return(
+                    <GuestForm key={index} />
+                    )
+              })}
               
               <Form.Label className="name">Add People In Your Party (Plus 1s And Children Aged 12+)</Form.Label>
-              <Button size="sm" id="addperson" variant="outline-primary">+</Button>{' '}
+              <Button size="sm" id="addperson" onClick={addGuest} variant="outline-primary">+</Button>{' '}
 
               <Form.Group className="children" controlId="Children">
                 <Form.Label> Bringing Young Children?</Form.Label>
@@ -138,7 +89,7 @@ const RSVP = () => {
                   min="0"
                   type="number"
                   placeholder="Number of Young Children (Aged 0-11) You're Bringing?"
-                  value={guest?.children}
+                  value={reservation?.children}
                   onChange={changeChildren}
                 />
                 <Form.Text className="text-muted">
@@ -162,7 +113,7 @@ const RSVP = () => {
                     min="0"
                     type="number"
                     placeholder="Number of Beds?"
-                    value={guest?.bedsNeeded}
+                    value={reservation?.bedsNeeded}
                     onChange={changeBedsNeeded}
                   />
                 </Form.Group>
