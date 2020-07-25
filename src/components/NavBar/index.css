@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap"); 
+
+.navbar {
+    color: white;
+    justify-content: center;
+    font-family: 'Old Standard TT', serif;
+    font-size: larger;
+}
+
+.home {
+    color: #ace4ff;
+}
+
+.rsvp {
+    color: #ace4ff;
+}

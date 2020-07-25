@@ -85,7 +85,9 @@ const RSVP = () => {
             <header className="headertitle">RSVP</header>
             <Form onSubmit={submitData}>
               <Form.Group className="name" controlId="Name">
-                <Form.Label></Form.Label>
+                <Form.Label>
+                  Your Name
+                </Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Name"
@@ -94,41 +96,8 @@ const RSVP = () => {
                 />
               </Form.Group>
 
-              <Form.Group className="plusone" controlId="PlusOneCheckBox">
-                <Form.Check
-                  type="checkbox"
-                  label="Plus One?"
-                  onChange={changePlusOneChecked}
-                />
-              </Form.Group>
-
-              {booleanChecker.plusOneChecked && (
-                <Form.Group className="plusonename" controlId="PlusOneName">
-                  <Form.Control
-                    type="text"
-                    placeholder="Plus One's Name?"
-                    value={guest?.plusOneName}
-                    onChange={changePlusOneName}
-                  />
-                </Form.Group>
-              )}
-              <Form.Group className="children" controlId="Children">
-                <Form.Label></Form.Label>
-                <Form.Control
-                  max="5"
-                  min="0"
-                  type="number"
-                  placeholder="Number of Children You're Bringing?"
-                  value={guest?.children}
-                  onChange={changeChildren}
-                />
-                <Form.Text className="text-muted">
-                  Children Will Receive Chicken Fingers As Their Dinner.
-                </Form.Text>
-              </Form.Group>
-
               <div>
-                <div className="dinner">Your Dinner Choice?</div>
+                <div className="dinner">Dinner Selection?</div>
                 <Form.Check
                   name="dinner"
                   className="filetmignon"
@@ -158,37 +127,25 @@ const RSVP = () => {
                   id={`inline-${"radio"}-3`}
                 />
               </div>
-              {booleanChecker.plusOneChecked && (
-                <div>
-                  <div className="dinnertwo">
-                    Your Plus One's Dinner Choice?
-                  </div>
-                  <Form.Check
-                    name="dinnertwo"
-                    className="filetmignon"
-                    inline
-                    label="Filet Mignon"
-                    type={"radio"}
-                    id={`inline-${"radio"}-1`}
-                  />
-                  <Form.Check
-                    name="dinnertwo"
-                    className="tuxedochicken"
-                    inline
-                    label="Tuxedo Chicken"
-                    type={"radio"}
-                    id={`inline-${"radio"}-2`}
-                  />
-                  <Form.Check
-                    name="dinnertwo"
-                    className="veggie"
-                    inline
-                    label="Veggie Stack"
-                    type={"radio"}
-                    id={`inline-${"radio"}-3`}
-                  />
-                </div>
-              )}
+              
+              <Form.Label className="name">Add People In Your Party (Plus 1s And Children Aged 12+)</Form.Label>
+              <Button size="sm" id="addperson" variant="outline-primary">+</Button>{' '}
+
+              <Form.Group className="children" controlId="Children">
+                <Form.Label> Bringing Young Children?</Form.Label>
+                <Form.Control
+                  max="5"
+                  min="0"
+                  type="number"
+                  placeholder="Number of Young Children (Aged 0-11) You're Bringing?"
+                  value={guest?.children}
+                  onChange={changeChildren}
+                />
+                <Form.Text className="text-muted">
+                  Children Will Receive Chicken Fingers As Their Dinner.
+                </Form.Text>
+              </Form.Group>
+
               <Form.Group className="hotel" controlId="HotelCheckBox">
                 <Form.Check
                   type="checkbox"
