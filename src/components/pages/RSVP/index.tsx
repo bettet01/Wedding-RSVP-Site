@@ -51,6 +51,7 @@ const RSVP = () => {
 
   const submitData = (e: any) => {
     e.preventDefault();
+    setReservation({...reservation, guests: guests})
     axios
       .post("http://localhost:8080/weddingguestrsvp", reservation, {
         headers: {

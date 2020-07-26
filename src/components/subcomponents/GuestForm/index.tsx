@@ -32,9 +32,7 @@ const GuestForm = (props: any) => {
     return (
         <div>
             <Form.Group className="name" controlId="Name">
-                <Form.Label>
-                    Your Name
-                </Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
                     type="text"
                     placeholder="Name"
