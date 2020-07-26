@@ -35,7 +35,6 @@ const RSVP = () => {
       guestFoodChoice: '',
     });
     setGuests([...newState]);
-    console.log(guests);
   }
 
   const changeChildren = (e: Event | any) => {
@@ -52,6 +51,7 @@ const RSVP = () => {
 
   const submitData = (e: any) => {
     e.preventDefault();
+    setReservation({...reservation, guests: guests})
     axios
       .post("http://localhost:8080/weddingguestrsvp", reservation, {
         headers: {
@@ -73,9 +73,13 @@ const RSVP = () => {
           <Card className="card">
             <header className="headertitle">RSVP</header>
             <Form onSubmit={submitData}>
+
+
               { guests.map((guest, index) => {
                 return(
-                    <GuestForm key={index} />
+                    <div>
+                      <GuestForm index={index} guests={guests} guest={guests[index]} setGuest={setGuests} />
+                    </div>
                     )
               })}
               
