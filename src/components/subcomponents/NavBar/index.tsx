@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import "./index.css";
@@ -17,6 +17,12 @@ const NavBar = () => {
             </Nav.Link>
             <Nav.Link>
               <Link className="rsvp" to="/rsvp">RSVP</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="gallery" to="/gallery">Gallery</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="details" to="/details">Details</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

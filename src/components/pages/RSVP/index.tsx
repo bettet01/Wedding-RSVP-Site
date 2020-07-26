@@ -96,28 +96,6 @@ const RSVP = () => {
                   Children Will Receive Chicken Fingers As Their Dinner.
                 </Form.Text>
               </Form.Group>
-
-              <Form.Group className="hotel" controlId="HotelCheckBox">
-                <Form.Check
-                  type="checkbox"
-                  label="Should We Reserve A Hotel Room(s) For You?"
-                  onChange={changeHotelCheckbox}
-                />
-              </Form.Group>
-
-              {booleanChecker.hotelChecked && (
-                <Form.Group className="hotelbeds" controlId="Beds">
-                  <Form.Label></Form.Label>
-                  <Form.Control
-                    max="4"
-                    min="0"
-                    type="number"
-                    placeholder="Number of Beds?"
-                    value={reservation?.bedsNeeded}
-                    onChange={changeBedsNeeded}
-                  />
-                </Form.Group>
-              )}
               <Button
                 id="button-group"
                 variant="outline-primary"
