@@ -1,8 +1,34 @@
-import React from "react";
+import React, {ChangeEvent} from "react";
 import Form from 'react-bootstrap/Form';
+import {Guest} from "../../../types/Guest";
 
 
 const GuestForm = (props: any) => {
+
+    const changeGuestName = (e: Event | any) => {
+        var newState:Guest[] = props.guests;
+        if(e.target.value != null){
+            newState[props.index] = {
+                ...props.guest,
+                guestName: e.target.value
+            }
+        }
+        props.setGuest([...newState]);
+    }
+
+    const changeGuestFoodChoice = (e: Event | any) => {
+        var newState:Guest[] = props.guests;
+        if(e.target.value != null){
+            newState[props.index] = {
+                ...props.guest,
+                guestFoodChoice: e.target.value
+            }
+        }
+        props.setGuest([...newState]);
+        console.log(newState);
+    }
+
+
     return (
         <div>
             <Form.Group className="name" controlId="Name">
@@ -12,12 +38,13 @@ const GuestForm = (props: any) => {
                 <Form.Control
                     type="text"
                     placeholder="Name"
-                    value={props.guest?.guestName}
-                    onChange={props.changeGuestName}
+                    value={props.guest.guestName}
+                    onChange={changeGuestName}
                 />
             </Form.Group>
 
             <div>
+                <Form>
                 <div className="dinner">Dinner Selection?</div>
                 <Form.Check
                     name="dinner"
@@ -27,7 +54,7 @@ const GuestForm = (props: any) => {
                     type={"radio"}
                     id={`inline-${"radio"}-1`}
                     value="Filet Mignon"
-                    onClick={props.changeGuestFoodChoice}
+                    onClick={changeGuestFoodChoice}
                 />
                 <Form.Check
                     name="dinner"
@@ -37,7 +64,7 @@ const GuestForm = (props: any) => {
                     type={"radio"}
                     id={`inline-${"radio"}-2`}
                     value="Tuxedo Chicken"
-                    onClick={props.changeGuestFoodChoice}
+                    onClick={changeGuestFoodChoice}
                 />
                 <Form.Check
                     name="dinner"
@@ -47,6 +74,7 @@ const GuestForm = (props: any) => {
                     type={"radio"}
                     id={`inline-${"radio"}-3`}
                 />
+                </Form>
             </div>
         </div>
     )
