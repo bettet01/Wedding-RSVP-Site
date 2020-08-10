@@ -22,7 +22,7 @@ const NavBar = () => {
               <Link className="gallery" to="/gallery">Gallery</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="details" to="/details">Details</Link>
+              <Link className="details" to="/info">Info</Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -4,7 +4,7 @@ import "./index.css";
 const Gallery = () => {
   return (
     <div>
-      <header className="wedding">Wedding Photos To Come!</header>
+          <header className="wedding">Wedding Photos To Come!</header>
     </div>
   );
 };

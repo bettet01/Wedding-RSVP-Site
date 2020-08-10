@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
 .wedding {
-    font-family: 'Dancing Script', cursive;
-    text-align: center;
-    color: white;
-    font-size: 48px;
-    margin-top: 20px;
+  font-family: "Dancing Script", cursive;
+  color: #ace4ff;
+  font-size: 35px;
+  margin-top: 20px;
+  border-color: white;
+  border-style: solid;
+  width: 400px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
 }
