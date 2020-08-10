@@ -8,7 +8,7 @@
     margin-left: 50px;
     border: round;
     overflow-y: scroll;
-    background-color: ivory;
+    background-color: white;
 }
 .headertitle {
     font-size: 35px;
@@ -29,7 +29,7 @@
 .dinner {
     margin-top: -5px;
     font-family: 'Old Standard TT', serif;
-    padding-left: 70px;
+    padding-left: 60px;
     padding-bottom: 5px;
     font-weight: bold;
 }

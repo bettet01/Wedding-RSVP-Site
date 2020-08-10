@@ -97,7 +97,7 @@ const RSVP = () => {
                   onChange={changeChildren}
                 />
                 <Form.Text className="text-muted">
-                  Children Will Receive Chicken Fingers As Their Dinner.
+                  Young Children Will Receive Chicken Fingers As Their Dinner.
                 </Form.Text>
               </Form.Group>
               <Button
