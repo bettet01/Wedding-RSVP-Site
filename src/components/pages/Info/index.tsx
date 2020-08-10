@@ -22,20 +22,20 @@ const Info = () => {
               <br />
               Location: Hidden Greens Golf Course
               <br />
-              12977 200th St E
+              12977 200th St E.,
               <br />
               Hastings, MN 55033
               <br />
               Reception At Ceremony Venue
               <br />
-              Formal Attire
+              Formal Attire Requested
             </p>
           </Col>
           <Col lg={4}>
             <header className="wedding-countdown">The "I Do" Countdown</header>
             <ReactMomentCountDown
               className="countdown"
-              style={{ color: "white" }}
+              style={{ color: "ivory" }}
               toDate={moment("Sat 21 Aug 2021 16:00:00")}
               targetFormatMask="MM:DD:HH:mm:ss"
             />
