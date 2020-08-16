@@ -16,9 +16,12 @@ const Info = () => {
           <Col lg={4}>
             <header className="detail">Wedding Details</header>
             <p className="detailed">
+              <br />
               Event Date: August 21st, 2021
               <br />
+              <br />
               Ceremony Start Time: 4:00 PM
+              <br />
               <br />
               Location: Hidden Greens Golf Course
               <br />
@@ -26,7 +29,9 @@ const Info = () => {
               <br />
               Hastings, MN 55033
               <br />
+              <br />
               Reception At Ceremony Venue
+              <br />
               <br />
               Formal Attire Requested
             </p>
@@ -39,17 +44,18 @@ const Info = () => {
               toDate={moment("Sat 21 Aug 2021 16:00:00")}
               targetFormatMask="MM:DD:HH:mm:ss"
             />
-            <header></header>
-            <Link to="/">
-              <Button bsPrefix="linkregistry">Access Registry Here!</Button>
-            </Link>
+            <header className="registry">Access Registries Here!</header>
+            <a target="_blank" href="https://www.target.com/gift-registry/giftgiver?registryId=002301809aa34966afa54d8700553528&type=WEDDING">
+              <Button bsPrefix="linkregistrytarget">
+                <img className="targetpic" src="https://www.verite.org/wp-content/uploads/2017/07/Target-Thumb.jpg"></img>
+              </Button>
+            </a>
+            <a target="_blank" href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549340290">
+              <Button bsPrefix="linkregistrybed">
+                <img className="bedpic" src="https://www.pngitem.com/pimgs/m/153-1531852_bed-bath-and-beyond-coupons-hd-png-download.png"></img>
+              </Button>
+            </a>
           </Col>
-          <Col></Col>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col lg={4}></Col>
-          <Col lg={4}></Col>
           <Col></Col>
           <Col></Col>
         </Row>

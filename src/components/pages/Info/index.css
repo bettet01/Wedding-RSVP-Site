@@ -13,7 +13,7 @@
 
 .wedding-countdown {
     font-size: 35px;
-    padding-top: 35px;
+    padding-top: 75px;
     margin-left: -100px;
     color: #ace4ff;
     font-family: 'Dancing Script', cursive;
@@ -23,34 +23,55 @@
     font-size: 35px;
     color: #ace4ff;
     font-family: 'Dancing Script', cursive;
-    padding-top: 35px;
+    padding-top: 75px;
     margin-left: -50px;
 }
 
 .detailed {
     color: ivory;
     font-family: 'Old Standard TT', serif;
-    font-size: 22px;
+    font-size: 23px;
     padding-top: 10px;
     margin-left:-150px;
     border-style: solid;
     border-color: #004aad;
     width: 400px;
+    height: 470px;
     text-align: center;
 }
 
-.linkregistry {
-    color: #ace4ff;
-    font-family: 'Dancing Script', cursive;
-    font-size: 35px;
+.linkregistrybed {
+    color: none;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border: none;
+    margin-top: 20px;
+    margin-left: -100px;
+}
+
+.linkregistrytarget {
+    color: none;
     padding-right: 10px;
     padding-left: 10px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #004aad;
-    border-style: solid;
-    border-color: #004aad;
+    border: none;
     margin-left: -100px;
-    margin-top: 25px;
-    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.registry {
+    font-size: 35px;
+    padding-top: 15px;
+    margin-left: -100px;
+    color: #ace4ff;
+    font-family: 'Dancing Script', cursive;   
+}
+
+.bedpic {
+    height: 80px;
+}
+
+.targetpic {
+    height: 173px;
 }

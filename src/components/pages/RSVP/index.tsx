@@ -81,8 +81,7 @@ const RSVP = () => {
                       <GuestForm index={index} guests={guests} guest={guests[index]} setGuest={setGuests} />
                     </div>
                     )
-              })}
-              
+              })}              
               <Form.Label className="name">Add People In Your Party (Plus 1s And Children Aged 12+)</Form.Label>
               <Button size="sm" id="addperson" onClick={addGuest} variant="outline-primary">+</Button>{' '}
 

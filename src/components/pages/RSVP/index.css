@@ -21,7 +21,6 @@
 .name {
     font-family: 'Old Standard TT', serif;
     padding-left: 60px;
-    padding-right: 60px;
     padding-top: 20px;
     font-weight: bold;
 }
@@ -36,7 +35,7 @@
 
 .filetmignon {
     font-family: 'Old Standard TT', serif;
-    margin-left: 90px;
+    margin-left: 60px;
 }
 
 .tuxedochicken {

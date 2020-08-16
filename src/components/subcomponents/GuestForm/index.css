@@ -1,0 +1,26 @@
+.smallcard {
+    width: 500px;
+    height: 170px;
+    overflow-y: hidden;
+}
+
+#cancel {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 30px; 
+    height: 30px; 
+    padding: 3px 11px; 
+    border-radius: 15px; 
+    text-align: center;
+    color:gray;
+    font-size: 14px;
+    border: none;
+    background-color: white;
+}
+
+.rowchange {
+    width: 90%;
+}
