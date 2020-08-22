@@ -4,11 +4,7 @@
 .countdown {
     font-size: 30px;
     font-family: 'Old Standard TT', serif;
-    margin-left: -70px;
-    margin-top: 80px;
-    border-color: #004aad;
-    border-style: solid;
-    padding: 5px;
+    margin-left: -80px;
 }
 
 .wedding-countdown {
@@ -17,6 +13,14 @@
     margin-left: -100px;
     color: #ace4ff;
     font-family: 'Dancing Script', cursive;
+}
+
+.countdown-labels {
+    font-size: 15px;
+    margin-left: -20%;
+    color: ivory;
+    font-family: 'Old Standard TT', serif;
+    margin-top: -2%;
 }
 
 .detail {
@@ -62,10 +66,10 @@
 
 .registry {
     font-size: 35px;
-    padding-top: 15px;
     margin-left: -100px;
     color: #ace4ff;
-    font-family: 'Dancing Script', cursive;   
+    font-family: 'Dancing Script', cursive; 
+    margin-top: -15px;  
 }
 
 .bedpic {

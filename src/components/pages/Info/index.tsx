@@ -38,26 +38,41 @@ const Info = () => {
           </Col>
           <Col lg={4}>
             <header className="wedding-countdown">The "I Do" Countdown</header>
-            <ReactMomentCountDown
-              className="countdown"
-              style={{ color: "ivory" }}
-              toDate={moment("Sat 21 Aug 2021 16:00:00")}
-              targetFormatMask="MM:DD:HH:mm:ss"
-            />
+            <div>
+              <ReactMomentCountDown
+                className="countdown"
+                style={{ color: "ivory" }}
+                toDate={moment("Sat 20 Aug 2021 16:00:00")}
+                targetFormatMask="DDD&nbsp;&nbsp; HH&nbsp;&nbsp; mm&nbsp;&nbsp; ss"
+              />
+              <p className="countdown-labels"> Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hrs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secs</p>
+            </div>
             <header className="registry">Access Registries Here!</header>
-            <a target="_blank" href="https://www.target.com/gift-registry/giftgiver?registryId=002301809aa34966afa54d8700553528&type=WEDDING">
+            <a
+              target="_blank"
+              href="https://www.target.com/gift-registry/giftgiver?registryId=002301809aa34966afa54d8700553528&type=WEDDING"
+            >
               <Button bsPrefix="linkregistrytarget">
-                <img className="targetpic" src="https://www.verite.org/wp-content/uploads/2017/07/Target-Thumb.jpg"></img>
+                <img
+                  className="targetpic"
+                  src="https://www.verite.org/wp-content/uploads/2017/07/Target-Thumb.jpg"
+                ></img>
               </Button>
             </a>
-            <a target="_blank" href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549340290">
+            <a
+              target="_blank"
+              href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549340290"
+            >
               <Button bsPrefix="linkregistrybed">
-                <img className="bedpic" src="https://www.pngitem.com/pimgs/m/153-1531852_bed-bath-and-beyond-coupons-hd-png-download.png"></img>
+                <img
+                  className="bedpic"
+                  src="https://www.pngitem.com/pimgs/m/153-1531852_bed-bath-and-beyond-coupons-hd-png-download.png"
+                ></img>
               </Button>
             </a>
           </Col>
-          <Col></Col>
-          <Col></Col>
+          <Col lg={2}></Col>
+          <Col lg={2}></Col>
         </Row>
       </Container>
     </div>
