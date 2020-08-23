@@ -6,3 +6,13 @@
   height: 100vh;
   margin: 0;
 }
+
+@media (max-width: 1366px) {
+  .background-image {
+    background-image: url(../src/WebBackground-Mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+  }
+}

@@ -16,7 +16,6 @@ const Info = () => {
           <Col xs={12} md={6} lg={4}>
             <header className="detail">Wedding Details</header>
             <p className="detailed">
-              <br />
               Event Date: August 21st, 2021
               <br />
               <br />
