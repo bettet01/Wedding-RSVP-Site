@@ -13,7 +13,7 @@ const Info = () => {
     <div>
       <Container>
         <Row>
-          <Col xs={12} md={6} lg={4}>
+          <Col xs={12} md={12} lg={4}>
             <header className="detail">Wedding Details</header>
             <p className="detailed">
               Event Date: August 21st, 2021
@@ -35,7 +35,7 @@ const Info = () => {
               Formal Attire Requested
             </p>
           </Col>
-          <Col xs={0} md={6} lg={4}>
+          <Col xs={0} md={0} lg={4}>
             <header className="wedding-countdown">The "I Do" Countdown</header>
             <div>
               <ReactMomentCountDown

@@ -1,42 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 
 #borderhome {
-    border-style: solid;
-    border-color: ivory;
-    width: 460px;
-    height: 130px;
+  border-style: solid;
+  border-color: ivory;
+  width: 460px;
+  height: 130px;
 }
 
 .header {
-    padding-top: 120px;
-    font-family: 'Dancing Script', cursive;
-    margin-left: 55px;
-    color: #ace4ff;
-    font-size: 35px;
-    padding-bottom: 5px;
+  padding-top: 120px;
+  font-family: "Dancing Script", cursive;
+  margin-left: 55px;
+  color: #ace4ff;
+  font-size: 35px;
+  padding-bottom: 5px;
 }
 
 .subheader {
-    color: ivory;
-    margin-left: -150px;
-    font-size: 20px;
-    text-align: center;
-    font-family: 'Old Standard TT', serif;
-    padding-bottom: 20px;
-    margin: 10px;
-    padding-top: 20px;
+  color: ivory;
+  margin-left: -150px;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Old Standard TT", serif;
+  padding-bottom: 20px;
+  margin: 10px;
+  padding-top: 20px;
 }
 
 .linkrsvp {
+  color: #ace4ff;
+  font-family: "Dancing Script", cursive;
+  margin-top: 15px;
+  margin-left: 195px;
+  font-size: 25px;
+  padding: 12px;
+  background-color: #004aad;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #004aad;
+}
+
+@media (max-width: 414px) {
+  #borderhome {
+    border-style: none;
+    border-color: none;
+    width: 320px;
+    height: 110px;
+    margin-left:-3px;
+  }
+
+  .header {
+    padding-top: 5px;
+    font-family: "Dancing Script", cursive;
+    margin-left: 10px;
     color: #ace4ff;
-    font-family: 'Dancing Script', cursive;
-    margin-top: 15px;
-    margin-left: 195px;
+    font-size: 28px;
+    padding-bottom: 5px;
+  }
+
+  .subheader {
+    color: ivory;
+    margin-left: -250px;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Old Standard TT", serif;
+    padding-bottom: 20px;
+    margin: 10px;
+    padding-top: 10px;
+  }
+
+  .linkrsvp {
+    color: #ace4ff;
+    font-family: "Dancing Script", cursive;
+    margin-top: 170px;
+    margin-left: 115px;
     font-size: 25px;
     padding: 12px;
     background-color: #004aad;
     border-style: solid;
     border-radius: 4px;
     border-color: #004aad;
+  }
 }

@@ -1,77 +1,160 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 
 .card {
-    width: 38rem;
-    height: 38rem;
+  width: 38rem;
+  height: 38rem;
+  margin-top: 20px;
+  margin-left: 50px;
+  border: round;
+  overflow-y: scroll;
+  background-color: white;
+  margin: auto;
+}
+.headertitle {
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.name {
+  font-family: "Old Standard TT", serif;
+  padding-left: 60px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.dinner {
+  margin-top: -5px;
+  font-family: "Old Standard TT", serif;
+  padding-left: 60px;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.filetmignon {
+  font-family: "Old Standard TT", serif;
+  margin-left: 60px;
+}
+
+.tuxedochicken {
+  font-family: "Old Standard TT", serif;
+}
+
+.veggie {
+  font-family: "Old Standard TT", serif;
+}
+
+#addperson {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-left: 275px;
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 3px 9px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.children {
+  font-weight: bold;
+  font-family: "Old Standard TT", serif;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#button-group {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 414px) {
+  .card {
+    width: 95%;
+    height: 70%;
     margin-top: 20px;
     margin-left: 50px;
     border: round;
     overflow-y: scroll;
     background-color: white;
     margin: auto;
-}
-.headertitle {
+  }
+  .headertitle {
     font-size: 35px;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
     margin-top: 30px;
     text-align: center;
     font-weight: bolder;
-    margin-bottom: 15px;
-}
+    margin-bottom: 5px;
+  }
 
-.name {
-    font-family: 'Old Standard TT', serif;
-    padding-left: 60px;
-    padding-top: 20px;
+  .name {
+    font-family: "Old Standard TT", serif;
+    padding-left: 20px;
+    padding-top: 10px;
     font-weight: bold;
-}
+  }
 
-.dinner {
-    margin-top: -5px;
-    font-family: 'Old Standard TT', serif;
-    padding-left: 60px;
+  .dinner {
+    margin-top: -55px;
+    font-family: "Old Standard TT", serif;
+    padding-left: 20px;
     padding-bottom: 5px;
     font-weight: bold;
-}
+  }
 
-.filetmignon {
-    font-family: 'Old Standard TT', serif;
-    margin-left: 60px;
-}
+  .filetmignon {
+    font-family: "Old Standard TT", serif;
+    margin-left: 20px;
+    width: 80%;
+  }
 
-.tuxedochicken {
-    font-family: 'Old Standard TT', serif;
-}
+  .tuxedochicken {
+    font-family: "Old Standard TT", serif;
+    margin-left: 20px;
+    width: 80%;
+  }
 
-.veggie {
-    font-family: 'Old Standard TT', serif;
-}
+  .veggie {
+    font-family: "Old Standard TT", serif;
+    margin-left: 20px;
+    width: 80%;
+    margin-bottom: 5px;
+  }
 
-#addperson {
+  #addperson {
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
-    margin-left: 275px;
+    margin-top: -10px;
+    margin-left: 45%;
     margin-bottom: 20px;
-    width: 30px; 
-    height: 30px; 
-    padding: 3px 9px; 
-    border-radius: 15px; 
+    width: 30px;
+    height: 30px;
+    padding: 3px 9px;
+    border-radius: 15px;
     text-align: center;
   }
 
-.children {
+  .children {
     font-weight: bold;
-    font-family: 'Old Standard TT', serif;
-    padding-left: 60px;
+    font-family: "Old Standard TT", serif;
+    padding-left: 20px;
     padding-right: 60px;
-}
+  }
 
-#button-group {
-    margin: auto;
+  #button-group {
+    margin-left: 40%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
   }
+}

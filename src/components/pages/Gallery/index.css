@@ -12,3 +12,18 @@
   max-width: 500px;
   margin: auto;
 }
+
+@media (max-width: 414px) {
+  .wedding {
+    font-family: "Dancing Script", cursive;
+    color: #ace4ff;
+    font-size: 35px;
+    margin-top: 30px;
+    border-color: ivory;
+    border-style: solid;
+    width: 300px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+  }
+}
