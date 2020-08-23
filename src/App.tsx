@@ -10,7 +10,6 @@ import Admin from "./components/pages/Admin";
 
 function App() {
   return (
-    <div className="background-image">
       <Router>
         <NavBar />
         <Switch>
@@ -31,7 +30,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-    </div>
   );
 }
 

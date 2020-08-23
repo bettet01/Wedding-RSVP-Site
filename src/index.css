@@ -1,4 +1,12 @@
 body {
+  background-repeat: no-repeat;
+  background-image: url(../src/WebBackground.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -12,4 +20,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-image: url(../src/WebBackground.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+@media (max-width: 414px) {
+  body {
+    background-image: url(../src/WebBackground-Mobile.png);
+  }
 }
