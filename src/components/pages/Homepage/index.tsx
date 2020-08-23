@@ -10,7 +10,7 @@ const Homepage = () => {
   return (
     <div>
       <Container>
-        <Col md={6}>
+        <Col xs={12} md={12} lg={6}>
           <Row>
             <header className="header">Join Us In Celebrating Our Love</header>
           </Row>
@@ -25,7 +25,7 @@ const Homepage = () => {
           </Link>
         </Col>
       </Container>
-      <Col md={6}></Col>
+      <Col xs={0} md={0} lg={6}></Col>
     </div>
   );
 };

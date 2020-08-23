@@ -13,7 +13,7 @@ const Info = () => {
     <div>
       <Container>
         <Row>
-          <Col lg={4}>
+          <Col xs={12} md={6} lg={4}>
             <header className="detail">Wedding Details</header>
             <p className="detailed">
               <br />
@@ -36,7 +36,7 @@ const Info = () => {
               Formal Attire Requested
             </p>
           </Col>
-          <Col lg={4}>
+          <Col xs={0} md={6} lg={4}>
             <header className="wedding-countdown">The "I Do" Countdown</header>
             <div>
               <ReactMomentCountDown
@@ -45,7 +45,12 @@ const Info = () => {
                 toDate={moment("Sat 20 Aug 2021 16:00:00")}
                 targetFormatMask="DDD&nbsp;&nbsp; HH&nbsp;&nbsp; mm&nbsp;&nbsp; ss"
               />
-              <p className="countdown-labels"> Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hrs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secs</p>
+              <p className="countdown-labels">
+                {" "}
+                Days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Hrs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Mins&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Secs
+              </p>
             </div>
             <header className="registry">Access Registries Here!</header>
             <a
@@ -71,8 +76,8 @@ const Info = () => {
               </Button>
             </a>
           </Col>
-          <Col lg={2}></Col>
-          <Col lg={2}></Col>
+          <Col xs={0} md={0} lg={2}></Col>
+          <Col xs={0} md={0} lg={2}></Col>
         </Row>
       </Container>
     </div>

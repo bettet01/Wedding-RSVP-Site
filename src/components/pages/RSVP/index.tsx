@@ -68,7 +68,7 @@ const RSVP = () => {
 
   return (
     <div>
-      <Col md={6}>
+      <Col xs={12} sm={12} md={12} lg={6}>
         <Row>
           <Card className="card">
             <header className="headertitle">RSVP</header>
@@ -111,7 +111,7 @@ const RSVP = () => {
           </Card>
         </Row>
       </Col>
-      <Col></Col>
+      <Col xs={0} sm={0} md={0} lg={6}></Col>
     </div>
   );
 };
