@@ -9,8 +9,14 @@ import axios from "axios";
 import {Reservation} from "../../../types/Reservation";
 import GuestForm from "../../subcomponents/GuestForm";
 import {Guest} from "../../../types/Guest";
+import Modal from 'react-bootstrap/Modal'
+import Redirect from 'react-router-dom/Redirect'
 
 const RSVP = () => {
+  const [show, setShow] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const [guests, setGuests] = React.useState<Guest[]>([
     {
       guestName: '',
@@ -49,7 +55,14 @@ const RSVP = () => {
         },
       })
       .then(() => {
-        console.log("Made it here!");
+        setGuests( [{
+          guestName: '',
+          guestFoodChoice: '',
+        }]);
+        handleShow();
+        setTimeout(function(){
+          setSubmitted(true);
+        }, 3000);
       })
       .catch((err: any) => {
         console.log(err);
@@ -102,6 +115,17 @@ const RSVP = () => {
         </Row>
       </Col>
       <Col xs={0} sm={0} md={0} lg={6}></Col>
+      <Modal show={show}>
+        <Modal.Header >
+          <Modal.Title>RSVP Sent!</Modal.Title>
+        </Modal.Header>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      {submitted && <Redirect to="/info" /> }
     </div>
   );
 };
