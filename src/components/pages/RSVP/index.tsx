@@ -10,11 +10,6 @@ import {Reservation} from "../../../types/Reservation";
 import GuestForm from "../../subcomponents/GuestForm";
 import {Guest} from "../../../types/Guest";
 
-type BooleanChecker = {
-  plusOneChecked: boolean;
-  hotelChecked: boolean;
-};
-
 const RSVP = () => {
   const [guests, setGuests] = React.useState<Guest[]>([
     {
@@ -22,10 +17,6 @@ const RSVP = () => {
       guestFoodChoice: '',
     },
   ])
-  const [booleanChecker, setBooleanChecker] = React.useState<BooleanChecker>({
-    plusOneChecked: false,
-    hotelChecked: false,
-  });
   const [reservation, setReservation] = React.useState<Reservation | null>(null);
 
   const addGuest = (e: Event | any) => {
@@ -41,19 +32,18 @@ const RSVP = () => {
     setReservation({ ...reservation, children: e.target.value });
   };
 
-  const changeBedsNeeded = (e: Event | any) => {
-    setReservation({ ...reservation, bedsNeeded: e.target.value });
-  };
-
-  const changeHotelCheckbox = (e: Event | any) => {
-    setBooleanChecker({ ...booleanChecker, hotelChecked: e.target.checked });
-  };
-
   const submitData = (e: any) => {
     e.preventDefault();
     setReservation({...reservation, guests: guests})
+    const payload = {
+      name: guests[0].guestName,
+      guest: {
+        ...guests,
+        ...reservation
+      }
+    }
     axios
-      .post("http://localhost:8080/weddingguestrsvp", reservation, {
+      .post("https://us-central1-ethanandjackie-f71f0.cloudfunctions.net/app/api/create", payload, {
         headers: {
           "Content-Type": "application/json",
         },

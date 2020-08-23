@@ -31,9 +31,12 @@ const GuestForm = (props: any) => {
     console.log(newState);
   };
 
-  const deleteGuest = (e: Event | any) => {
-    console.log("clicked button");
-  };
+  const removeGuest = () => {
+    var newState: Guest[] = props.guests;
+    const index = newState.indexOf(props.guest)
+    newState.splice(index, 1);
+    props.setGuest([...newState]);
+  }
 
   return (
     <div>
@@ -53,7 +56,7 @@ const GuestForm = (props: any) => {
                 </Form.Group>
               </Col>
               <Col lg={1}>
-                <Button size="sm" onClick={deleteGuest} variant="light" id="cancel">x</Button>
+                <Button size="sm" onClick={removeGuest} variant="light" id="cancel">x</Button>
               </Col>
             </Row>
           </div>
