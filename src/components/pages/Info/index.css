@@ -109,7 +109,6 @@
     font-family: "Dancing Script", cursive;
     padding-left: 150px;
     margin-top: -70px;
-
   }
 
   .detailed {
@@ -119,9 +118,9 @@
     margin-left: 38px;
     border-style: solid;
     border-color: #004aad;
-    padding: 5px;
+    padding: 2px;
     width: 300px;
-    height: 260px;
+    height: 255px;
     text-align: center;
   }
 
@@ -159,5 +158,87 @@
 
   .targetpic {
     height: 100px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .countdown {
+    font-size: 20px;
+    font-family: "Old Standard TT", serif;
+    margin-left: 85px;
+  }
+
+  .wedding-countdown {
+    font-size: 25px;
+    margin-left: 58px;
+    color: #ace4ff;
+    font-family: "Dancing Script", cursive;
+    margin-top: -70px;
+  }
+
+  .countdown-labels {
+    font-size: 10px;
+    margin-left: 91px;
+    color: ivory;
+    font-family: "Old Standard TT", serif;
+    margin-top: -0.5rem;
+  }
+
+  .detail {
+    font-size: 25px;
+    color: #ace4ff;
+    font-family: "Dancing Script", cursive;
+    padding-left: 150px;
+    margin-top: -70px;
+  }
+
+  .detailed {
+    color: ivory;
+    font-family: "Old Standard TT", serif;
+    font-size: 15px;
+    margin-left: 38px;
+    border-style: solid;
+    border-color: #004aad;
+    padding-top: 20px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .linkregistrybed {
+    color: none;
+    padding-right: 17px;
+    padding-left: 17px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    border: none;
+    margin-top: 18px;
+    margin-left: 80px;
+  }
+
+  .linkregistrytarget {
+    color: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: none;
+    margin-left: 80px;
+    margin-top: 10px;
+  }
+
+  .registry {
+    font-size: 25px;
+    margin-left: 60px;
+    color: #ace4ff;
+    font-family: "Dancing Script", cursive;
+    margin-top: -15px;
+  }
+
+  .bedpic {
+    height: 40px;
+  }
+
+  .targetpic {
+    height: 90px;
   }
 }

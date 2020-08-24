@@ -1,24 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
 
 .navbar {
-    color: white;
-    justify-content: center;
-    font-family: 'Old Standard TT', serif;
-    font-size: larger;
+  color: white;
+  justify-content: center;
+  font-family: "Old Standard TT", serif;
+  font-size: larger;
 }
 
 .home {
-    color: #ace4ff;
+  color: #ace4ff;
 }
 
 .rsvp {
-    color: #ace4ff;
+  color: #ace4ff;
 }
 
 .gallery {
-    color: #ace4ff;
+  color: #ace4ff;
 }
 
 .details {
-    color: #ace4ff;
+  color: #ace4ff;
 }

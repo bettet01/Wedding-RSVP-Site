@@ -47,7 +47,7 @@
     border-color: none;
     width: 320px;
     height: 110px;
-    margin-left:-3px;
+    margin-left: -3px;
   }
 
   .header {
@@ -67,14 +67,56 @@
     font-family: "Old Standard TT", serif;
     padding-bottom: 20px;
     margin: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   .linkrsvp {
     color: #ace4ff;
     font-family: "Dancing Script", cursive;
-    margin-top: 170px;
+    margin-top: 150px;
     margin-left: 115px;
+    font-size: 25px;
+    padding: 12px;
+    background-color: #004aad;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #004aad;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  #borderhome {
+    border-style: solid;
+    border-color: ivory;
+    width: 460px;
+    height: 110px;
+    margin-left: 95px;
+  }
+
+  .header {
+    padding-top: 5px;
+    font-family: "Dancing Script", cursive;
+    margin-left: 180px;
+    color: #ace4ff;
+    font-size: 28px;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  .subheader {
+    color: ivory;
+    font-size: 15px;
+    text-align: center;
+    font-family: "Old Standard TT", serif;
+    margin: 10px;
+    padding-top: 20px;
+  }
+
+  .linkrsvp {
+    color: #ace4ff;
+    font-family: "Dancing Script", cursive;
+    margin-top: 20px;
+    margin-left: 285px;
     font-size: 25px;
     padding: 12px;
     background-color: #004aad;

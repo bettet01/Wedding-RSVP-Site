@@ -72,7 +72,7 @@ const RSVP = () => {
                     </div>
                     )
               })}              
-              <Form.Label className="name">Add People In Your Party (Plus 1s And Children Aged 12+)</Form.Label>
+              <Form.Label className="children">Add People In Your Party (Plus 1s And Children Aged 12+)</Form.Label>
               <Button size="sm" id="addperson" onClick={addGuest} variant="outline-primary">+</Button>{' '}
 
               <Form.Group className="children" controlId="Children">
