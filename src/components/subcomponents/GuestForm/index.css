@@ -1,7 +1,7 @@
 .smallcard {
   width: 500px;
-  height: 170px;
-  overflow-y: hidden;
+  height: 200px;
+  overflow: hidden;
 }
 
 #cancel {
@@ -9,7 +9,7 @@
   flex-direction: row;
   margin-top: 10px;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: -30px;
   width: 30px;
   height: 30px;
   padding: 3px 11px;

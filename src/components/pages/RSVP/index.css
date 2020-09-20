@@ -10,49 +10,49 @@
   overflow-y: scroll;
   background-color: white;
   margin: auto;
+  overflow-x: hidden;
 }
 .headertitle {
   font-size: 35px;
   font-family: "Dancing Script", cursive;
   margin-top: 30px;
   text-align: center;
-  font-weight: bolder;
   margin-bottom: 15px;
 }
 
 .name {
   font-family: "Old Standard TT", serif;
-  padding-left: 60px;
+  padding-left: 20px;
   padding-top: 20px;
-  font-weight: bold;
 }
 
 .dinner {
-  margin-top: -5px;
+  margin-top: 20px;
   font-family: "Old Standard TT", serif;
-  padding-left: 60px;
   padding-bottom: 5px;
-  font-weight: bold;
+  padding-left: 20px;
 }
 
 .filetmignon {
+  margin-left: 40px;
   font-family: "Old Standard TT", serif;
-  margin-left: 60px;
 }
 
 .tuxedochicken {
+  margin-left: 40px;
   font-family: "Old Standard TT", serif;
 }
 
 .veggie {
+  margin-left: 40px;
   font-family: "Old Standard TT", serif;
 }
 
 #addperson {
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
-  margin-left: 275px;
+  margin-top: 40px;
+  margin-left: 90px;
   margin-bottom: 20px;
   width: 30px;
   height: 30px;
@@ -62,8 +62,8 @@
 }
 
 .children {
-  font-weight: bold;
   font-family: "Old Standard TT", serif;
+  margin-top: 20px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -73,7 +73,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
 
 @media (max-width: 414px) {
@@ -92,7 +93,6 @@
     font-family: "Dancing Script", cursive;
     margin-top: 30px;
     text-align: center;
-    font-weight: bolder;
     margin-bottom: 5px;
   }
 
@@ -100,7 +100,6 @@
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-top: 10px;
-    font-weight: bold;
   }
 
   .dinner {
@@ -108,7 +107,6 @@
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-bottom: 5px;
-    font-weight: bold;
   }
 
   .filetmignon {
@@ -144,7 +142,6 @@
   }
 
   .children {
-    font-weight: bold;
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-right: 60px;
@@ -175,7 +172,6 @@
     font-family: "Dancing Script", cursive;
     margin-top: 30px;
     text-align: center;
-    font-weight: bolder;
     margin-bottom: 5px;
   }
 
@@ -183,7 +179,6 @@
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-top: 10px;
-    font-weight: bold;
   }
 
   .dinner {
@@ -191,7 +186,6 @@
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-bottom: 5px;
-    font-weight: bold;
   }
 
   .filetmignon {
@@ -227,7 +221,6 @@
 
   .children {
     margin-top: 20px;
-    font-weight: bold;
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-right: 60px;
