@@ -25,7 +25,7 @@
   width: 90%;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1050px) {
   .smallcard {
     width: 90%;
     height: 65%;
@@ -35,8 +35,7 @@
 
   #cancel {
     position: relative;
-    top: -170%;
-    right: -93%;
+    right: -90%;
     margin-top: 10px;
     margin-bottom: 20px;
     width: 30px;
@@ -54,34 +53,3 @@
     width: 90%;
   }
 }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .smallcard {
-      width: 95%;
-      height: 75%;
-      overflow-y: hidden;
-      margin-top: 10px;
-    }
-  
-    #cancel {
-      position: relative;
-      top: -162%;
-      right: -100%;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 30px;
-      height: 30px;
-      padding: 3px 11px;
-      border-radius: 5px;
-      text-align: center;
-      color: gray;
-      font-size: 14px;
-      border: none;
-      background-color: white;
-    }
-  
-    .rowchange {
-      width: 90%;
-    }
-  }
-  

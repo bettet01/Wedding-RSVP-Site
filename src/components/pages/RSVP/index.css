@@ -77,7 +77,7 @@
   margin-top: 30px;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 1050px) {
   .card {
     width: 95%;
     height: 70%;
@@ -100,10 +100,11 @@
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-top: 10px;
+    margin-top: -40px;
   }
 
   .dinner {
-    margin-top: -55px;
+    margin-top: 0px;
     font-family: "Old Standard TT", serif;
     padding-left: 20px;
     padding-bottom: 5px;
@@ -131,8 +132,8 @@
   #addperson {
     display: flex;
     flex-direction: row;
-    margin-top: -10px;
-    margin-left: 45%;
+    margin-top: 80px;
+    margin-left: 50px;
     margin-bottom: 20px;
     width: 30px;
     height: 30px;
@@ -143,91 +144,12 @@
 
   .children {
     font-family: "Old Standard TT", serif;
-    padding-left: 20px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   #button-group {
     margin-left: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-.card {
-    width: 95%;
-    height: 670px;
-    margin-top: 20px;
-    margin-left: 50px;
-    border: round;
-    overflow-y: scroll;
-    background-color: white;
-    margin: auto;
-  }
-  .headertitle {
-    font-size: 35px;
-    font-family: "Dancing Script", cursive;
-    margin-top: 30px;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-
-  .name {
-    font-family: "Old Standard TT", serif;
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-
-  .dinner {
-    margin-top: -55px;
-    font-family: "Old Standard TT", serif;
-    padding-left: 20px;
-    padding-bottom: 5px;
-  }
-
-  .filetmignon {
-    font-family: "Old Standard TT", serif;
-    margin-left: 20px;
-    width: 51%;
-  }
-
-  .tuxedochicken {
-    font-family: "Old Standard TT", serif;
-    margin-left: 20px;
-    width: 51%;
-  }
-
-  .veggie {
-    font-family: "Old Standard TT", serif;
-    margin-left: 20px;
-    width: 51%;
-    margin-bottom: 5px;
-  }
-
-  #addperson {
-    display: flex;
-    flex-direction: row;
-    margin-top: -5px;
-    margin-left: 48%;
-    width: 30px;
-    height: 30px;
-    padding: 3px 9px;
-    border-radius: 15px;
-    text-align: center;
-  }
-
-  .children {
-    margin-top: 20px;
-    font-family: "Old Standard TT", serif;
-    padding-left: 20px;
-    padding-right: 60px;
-  }
-
-  #button-group {
-    margin-left: 45%;
     display: flex;
     flex-direction: row;
     justify-content: center;
