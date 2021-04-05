@@ -2,4 +2,4 @@
 
 ## todo
 
-#### create a mangement page for the database
+#### change radio buttons to dropdown in rsvp
