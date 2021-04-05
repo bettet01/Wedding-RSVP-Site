@@ -26,11 +26,10 @@
   padding-top: 20px;
 }
 
-.dinner {
-  margin-top: 20px;
+.selectBox {
   font-family: "Old Standard TT", serif;
-  padding-bottom: 5px;
   padding-left: 20px;
+  width: 90%;
 }
 
 .filetmignon {

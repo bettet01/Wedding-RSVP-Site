@@ -28,7 +28,6 @@ const GuestForm = (props: any) => {
       };
     }
     props.setGuest([...newState]);
-    console.log(newState);
   };
 
   const removeGuest = () => {
@@ -72,37 +71,14 @@ const GuestForm = (props: any) => {
           <div>
             <Row>
               <Col>
-                <div className="dinner">Dinner Selection?</div>
-              </Col>
-              <Col>
-                <Form.Check
-                  name="dinner"
-                  className="filetmignon"
-                  inline
-                  label="Filet Mignon"
-                  type={"radio"}
-                  id={`inline-${"radio"}-1`}
-                  value="Filet Mignon"
-                  onClick={changeGuestFoodChoice}
-                />
-                <Form.Check
-                  name="dinner"
-                  className="tuxedochicken"
-                  inline
-                  label="Tuxedo Chicken"
-                  type={"radio"}
-                  id={`inline-${"radio"}-2`}
-                  value="Tuxedo Chicken"
-                  onClick={changeGuestFoodChoice}
-                />
-                <Form.Check
-                  name="dinner"
-                  className="veggie"
-                  inline
-                  label="Veggie Stack"
-                  type={"radio"}
-                  id={`inline-${"radio"}-3`}
-                />
+                <Form.Group className="selectBox"  controlId="exampleForm.SelectCustom">
+                  <Form.Label >Dinner Selection</Form.Label>
+                  <Form.Control onChange={changeGuestFoodChoice} as="select" custom>
+                    <option value="Filet Mignon">Filet Mignon</option>
+                    <option value="Tuxedo Chicken">Tuxedo Chicken</option>
+                    <option value="Veggie Stack">Veggie Stack</option>
+                  </Form.Control>
+                </Form.Group>
               </Col>
             </Row>
           </div>

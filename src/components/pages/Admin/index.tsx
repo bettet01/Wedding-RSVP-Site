@@ -29,7 +29,7 @@ export const Admin = () => {
                 if (res.guest[guest].guestFoodChoice === 'Tuxedo Chicken') {
                     chicken++;
                 }
-                if (res.guest[guest].guestFoodChoice === '') {
+                if (res.guest[guest].guestFoodChoice === 'Veggie Stack') {
                     veggie++;
                 }
             }

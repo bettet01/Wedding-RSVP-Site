@@ -77,7 +77,7 @@ const RSVP = () => {
                         <Form onSubmit={submitData}>
                             {guests.map((guest, index) => {
                                 return (
-                                    <div>
+                                    <div style={{margin: 10}}>
                                         <GuestForm
                                             index={index}
                                             guests={guests}
@@ -89,7 +89,7 @@ const RSVP = () => {
                             })}
                             <Row>
                                 <Col>
-                                    <Form.Label className="children">
+                                    <Form.Label style={{  fontWeight: 'bold'}} className="children">
                                         Add People In Your Party (Plus 1s And Children Aged 12+)
                                     </Form.Label>
                                 </Col>
