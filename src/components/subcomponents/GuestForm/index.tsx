@@ -10,7 +10,7 @@ import Row from "react-bootstrap/Row";
 const GuestForm = (props: any) => {
   const changeGuestName = (e: Event | any) => {
     var newState: Guest[] = props.guests;
-    if (e.target.value != null) {
+    if (e.target.value != null || e.target.value !== "") {
       newState[props.index] = {
         ...props.guest,
         guestName: e.target.value,
@@ -21,7 +21,7 @@ const GuestForm = (props: any) => {
 
   const changeGuestFoodChoice = (e: Event | any) => {
     var newState: Guest[] = props.guests;
-    if (e.target.value != null) {
+    if (e.target.value != null || e.target.value !== "") {
       newState[props.index] = {
         ...props.guest,
         guestFoodChoice: e.target.value,
@@ -40,7 +40,6 @@ const GuestForm = (props: any) => {
   return (
     <div>
       <Card className="smallcard">
-        <Form>
           <div className="rowchange">
             <Row>
               <Col lg={11}></Col>
@@ -60,6 +59,7 @@ const GuestForm = (props: any) => {
                 <Form.Group className="name" controlId="Name">
                   <Form.Label>Name</Form.Label>
                   <Form.Control
+                    required
                     type="text"
                     value={props.guest.guestName}
                     onChange={changeGuestName}
@@ -73,7 +73,8 @@ const GuestForm = (props: any) => {
               <Col>
                 <Form.Group className="selectBox"  controlId="exampleForm.SelectCustom">
                   <Form.Label >Dinner Selection</Form.Label>
-                  <Form.Control onChange={changeGuestFoodChoice} as="select" custom>
+                  <Form.Control required onChange={changeGuestFoodChoice} as="select" custom>
+                    <option value="">Choose...</option>
                     <option value="Filet Mignon">Filet Mignon</option>
                     <option value="Tuxedo Chicken">Tuxedo Chicken</option>
                     <option value="Veggie Stack">Veggie Stack</option>
@@ -82,7 +83,6 @@ const GuestForm = (props: any) => {
               </Col>
             </Row>
           </div>
-        </Form>
       </Card>
     </div>
   );

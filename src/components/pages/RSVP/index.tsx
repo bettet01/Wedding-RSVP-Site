@@ -42,6 +42,22 @@ const RSVP = () => {
 
     const submitData = (e: any) => {
         e.preventDefault();
+        const form = e.currentTarget;
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        guests.forEach((guest, index) => {
+            if (guest.guestFoodChoice === "" || guest.guestFoodChoice === undefined) {
+                let newState: Guest[] = guests;
+                newState[index] = {
+                    ...guest,
+                    hasFoodChoice: false,
+                };
+                setGuests([...newState]);
+                return;
+            }
+        })
         setReservation({...reservation, guests: guests});
         const payload = {
             name: guests[0].guestName,
@@ -50,7 +66,7 @@ const RSVP = () => {
                 ...reservation,
             },
         };
-            postRsvp(payload)
+        postRsvp(payload)
             .then(() => {
                 setGuests([
                     {
@@ -89,7 +105,7 @@ const RSVP = () => {
                             })}
                             <Row>
                                 <Col>
-                                    <Form.Label style={{  fontWeight: 'bold'}} className="children">
+                                    <Form.Label style={{fontWeight: 'bold'}} className="children">
                                         Add People In Your Party (Plus 1s And Children Aged 12+)
                                     </Form.Label>
                                 </Col>
@@ -131,7 +147,6 @@ const RSVP = () => {
                                 id="button-group"
                                 variant="outline-primary"
                                 type="submit"
-                                onClick={submitData}
                             >
                                 Submit
                             </Button>

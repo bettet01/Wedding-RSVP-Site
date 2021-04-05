@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import "./index.css";
 import {getRsvps} from "../../../services/backendService";
 import {DataCard} from "../../subcomponents/DataCard";
-import {Button} from "react-bootstrap";
 
 export const Admin = () => {
     const [rsvps, setRvsp] = useState<any>({});
