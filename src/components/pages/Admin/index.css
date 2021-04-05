@@ -1,0 +1,15 @@
+.data-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+
+.loading-container {
+    color: ivory;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-content: center;
+}

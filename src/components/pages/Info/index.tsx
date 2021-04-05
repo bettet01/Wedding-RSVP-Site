@@ -1,12 +1,11 @@
 import "./index.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactMomentCountDown from "react-moment-countdown";
 import moment from "moment";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
@@ -53,22 +52,26 @@ const Info = () => {
             </div>
             <header className="registry">Access Registries Here!</header>
             <a
-              target="_blank"
+                rel="noreferrer"
+                target="_blank"
               href="https://www.target.com/gift-registry/giftgiver?registryId=002301809aa34966afa54d8700553528&type=WEDDING"
             >
               <Button bsPrefix="linkregistrytarget">
                 <img
+                  alt={"target company"}
                   className="targetpic"
                   src="https://www.verite.org/wp-content/uploads/2017/07/Target-Thumb.jpg"
                 ></img>
               </Button>
             </a>
             <a
-              target="_blank"
+                rel="noreferrer"
+                target="_blank"
               href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549340290"
             >
               <Button bsPrefix="linkregistrybed">
                 <img
+                    alt={"bed bath and beyond company"}
                   className="bedpic"
                   src="https://www.pngitem.com/pimgs/m/153-1531852_bed-bath-and-beyond-coupons-hd-png-download.png"
                 ></img>
